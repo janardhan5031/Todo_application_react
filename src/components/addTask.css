@@ -1,0 +1,27 @@
+
+.add_task_container{
+    width: 100%;
+}
+
+.add_task_container form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add_task_container input{
+    width: 80%;
+    height: 1.5rem;
+    outline: none;
+    border: 0.15rem solid blue;
+    border-radius: 0.4rem;
+    font-size: 1em;
+}
+.add_task_container button{
+    width: 15% ;
+    background-color: blue;
+    border: none;
+    border-radius: 0.4rem;
+    color: white;
+    font-size: 1em;
+}
