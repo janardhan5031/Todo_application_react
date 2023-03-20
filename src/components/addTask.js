@@ -1,4 +1,4 @@
-
+import React from "react";
 import { useState, useContext, useEffect } from "react";
 import TaskContext from "../Store/TaskContext";
 
@@ -10,6 +10,8 @@ const AddTask = (props) => {
     const ctx = useContext(TaskContext);
     const [btn_name, set_btn_name] = useState('Add')
 
+    console.log('add Task component is rendered')
+
     useEffect(() => {
         if (props.update_task_id) {
             ctx.list.forEach(task => {
@@ -20,7 +22,7 @@ const AddTask = (props) => {
             set_btn_name('Add')
         }
 
-    }, [props.update_task_id])
+    }, [props.update_task_id, ctx.list])
 
     const task_name_onchange = (e) => {
         // console.log(e.target.value)
@@ -50,4 +52,4 @@ const AddTask = (props) => {
     </>
 }
 
-export default AddTask;
+export default React.memo(AddTask);

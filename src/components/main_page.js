@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import './main_page.css'
 
 import ShowList from './showList';
@@ -11,9 +11,9 @@ const Main_page = () => {
     const update_task_name_event = (id) => {
         set_update_task_id(id);
     }
-    const remove_update_task_event = () => {
+    const remove_update_task_event = useCallback(() => {
         set_update_task_id(undefined)
-    }
+    },[])
 
     return <TaskCtxProvider>
         <div className="body">

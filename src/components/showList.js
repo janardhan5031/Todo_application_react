@@ -12,6 +12,7 @@ const ShowList = (props) => {
         setList(ctx.list)
     },[ctx.list])
 
+    console.log('showList component is rendered');
 
     const Search_Onchange = (e) => {
         // console.log(e.target.value)
