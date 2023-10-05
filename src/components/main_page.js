@@ -5,7 +5,7 @@ import ShowList from './showList';
 import AddTask from './addTask';
 import TaskCtxProvider from '../Store/TaskContextProvider';
 
-const Main_page = () => {
+const MainPage = () => {
     const [update_tast_id, set_update_task_id] = useState(undefined);
 
     const update_task_name_event = (id) => {
@@ -30,4 +30,4 @@ const Main_page = () => {
     </TaskCtxProvider>
 }
 
-export default Main_page;
+export default MainPage;
